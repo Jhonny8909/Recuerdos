@@ -648,8 +648,8 @@ GameObject:
   - component: {fileID: 2108619321}
   - component: {fileID: 2108619320}
   - component: {fileID: 2108619319}
-  - component: {fileID: 2108619318}
   - component: {fileID: 2108619317}
+  - component: {fileID: 2108619322}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -669,7 +669,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f367be52d797cf74d99d1406d6ec626c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &2108619318
+  dialogueMark: {fileID: 0}
+  dialoguePanel: {fileID: 1511961896}
+  dialogueText: {fileID: 1357617757}
+  dialogueLines:
+  - Hola Putos
+--- !u!61 &2108619319
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -682,7 +687,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020970464, y: -0.38795567}
+  m_Offset: {x: 0, y: -0.14318812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -693,33 +698,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4745286, y: 1.7759113}
-  m_EdgeRadius: 0
---- !u!61 &2108619319
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108619316}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.71362376}
   m_EdgeRadius: 0
 --- !u!212 &2108619320
 SpriteRenderer:
@@ -788,6 +767,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2108619322
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108619316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03579688, y: -0.21478218}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5773864, y: 2.0739112}
+  m_EdgeRadius: 0
 --- !u!1001 &7828226506356679998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -845,22 +850,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionId
       value: 7e3d3357-0d6b-4ca5-a5e8-60043c90a693
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 9b15a8ff-ce0a-4548-aa9d-ca26216d6841
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionName
       value: Player/Walk[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/interact[/Keyboard/f]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
@@ -868,7 +901,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1367204793}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
@@ -876,16 +917,32 @@ PrefabInstance:
       value: OnWalk
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Oninteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617930, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7828226506552617935, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
       propertyPath: m_Name
       value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828226506552617935, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4851d8730f823624c9e04d53379b05dd, type: 3}

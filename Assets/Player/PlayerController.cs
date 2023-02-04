@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 moveVector;
     public float moveSpeed;
-
+    
     private void Awake()
     {
         //Cuando inicie la escena el script mandara a llamar al rb y a la gravedad del rb y se definiran en las variables
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         moveVector = context.ReadValue<Vector2>();
     }
+    
 
     private void FixedUpdate()
     {
