@@ -9,7 +9,7 @@ public class Contador : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (limite <= contador)
+        if (contador <= limite)
         {
             if (collision.CompareTag("Objeto"))
             {
