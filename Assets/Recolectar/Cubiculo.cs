@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class Cubiculo : MonoBehaviour
 {
-    private Contador contador;
+    private bool isPlayerInRange;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (contador.contador > 0)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.CompareTag("Player")) { 
-            
-                gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            }
+            isPlayerInRange = true;
+            Debug.Log("Accion");
         }
-        
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+            Debug.Log("No accion");
+        }
 
     }
 }

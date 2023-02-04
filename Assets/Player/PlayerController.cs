@@ -15,14 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         //Cuando inicie la escena el script mandara a llamar al rb y a la gravedad del rb y se definiran en las variables
         _rb = GetComponent<Rigidbody2D>();
-
-   
-
-        //Aqui asigno los valores a velocidad y salto desde el objeto
-        moveSpeed = 10;
-
-       
-
     }
     public void OnWalk(InputAction.CallbackContext context)
     {
@@ -34,9 +26,6 @@ public class PlayerController : MonoBehaviour
     {
         _rb.velocity = new Vector2(moveVector.x * moveSpeed, _rb.velocity.y);
         _rb.velocity = new Vector2(_rb.velocity.x, moveVector.y * moveSpeed);
-
-
-
     }
 
 }
