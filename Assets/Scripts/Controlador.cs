@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controlador : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class Controlador : MonoBehaviour
     public int ContadorJug;
     public int NivelActual;
 
+   
+    public GameObject sprite;
+    public GameObject tecla1;
+    public GameObject tecla2;
+    public GameObject tecla3;
+
+    public GameObject nota;
+
     [Range(0.1f, 2f)]
     public float Velocidad;
 
@@ -26,7 +35,7 @@ public class Controlador : MonoBehaviour
     }
     void LlenarListaAleatoria()
     {
-        for (int i=0; i <= 1000; i++)
+        for (int i=0; i <= 5; i++)
         {
             ListaAleatoria.Add(Random.Range(0, 3));
         }
@@ -85,5 +94,23 @@ public class Controlador : MonoBehaviour
             ContadorJug++;
         }
     }
+
+    private void Update()
+    {
+        if (NivelActual == 6)
+        {
+            print("victoria");
+            nota.SetActive(true);
+            sprite.SetActive(false);
+            tecla1.SetActive(false);
+            tecla2.SetActive(false);
+            tecla3.SetActive(false);
+            return;
+
+        }
+    }
    
+
+
+
 }
