@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Minijuego : MonoBehaviour
@@ -15,6 +16,10 @@ public class Minijuego : MonoBehaviour
     public Animator animacion;
 
     public GameObject game;
+
+    public int contador;
+
+    public GameObject notata;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +44,18 @@ public class Minijuego : MonoBehaviour
             game.SetActive(true);
             }
 
+            if(contador == 3)
+        {
+            notafin();
+        }
+
+           
+            
+        
+    }
+
+    public void FixedUpdate()
+    {
         
     }
 
@@ -48,5 +65,14 @@ public class Minijuego : MonoBehaviour
         animacion.SetBool("Stop", false);
         game.SetActive(false);
         tiempoSigStop = tiempoEntreStop;
+        contador++;
+    }
+
+    public void notafin()
+    {
+        tiempoSigStop = 500;
+        notata.SetActive(true);
+
+        
     }
 }
