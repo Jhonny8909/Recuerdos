@@ -4,9 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class Dialogue : MonoBehaviour
+public class Dialogo : MonoBehaviour
 {
-
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
@@ -15,9 +14,18 @@ public class Dialogue : MonoBehaviour
     private bool didDialogueStart;
     private int lineIndex;
     private float typingTime = 0.05f;
+
+    [SerializeField] private float tiempoEntreStop;
+    [SerializeField] private float tiempoSigStop;
+
+    [SerializeField] private float tiempoEntreStop2;
+    [SerializeField] private float tiempoSigStop2;
+
     public AudioSource cancion;
 
-    void Update()
+    private int contador;
+
+    void FixedUpdate()
     {
 
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
@@ -26,17 +34,36 @@ public class Dialogue : MonoBehaviour
             {
                 StartDialogue();
                 cancion.Play();
+                tiempoSigStop2 = tiempoEntreStop2;
+                tiempoSigStop = tiempoEntreStop;
             }
-            else if (dialogueText.text == dialogueLines[lineIndex])
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                dialogueText.text = dialogueLines[lineIndex];
-            }
+        }
+        if (tiempoSigStop > 0)
+        {
+            tiempoSigStop -= Time.deltaTime;
+        }
+        if (tiempoSigStop <= 0)
+        {
 
+            
+            NextDialogueLine();
+        }
+
+        if (tiempoSigStop2 > 0)
+        {
+            tiempoSigStop2 -= Time.deltaTime;
+        }
+        if (tiempoSigStop2 <= 0)
+        {
+
+            tiempoSigStop2 = tiempoEntreStop2;
+            NextDialogueLine();
+            contador++;
+        }
+        if(contador == 9)
+        {
+            StopAllCoroutines();
+            dialogueText.text = dialogueLines[lineIndex];
         }
     }
 
@@ -46,7 +73,7 @@ public class Dialogue : MonoBehaviour
         dialoguePanel.SetActive(true);
         lineIndex = 0;
         StartCoroutine(ShowLine());
-        Time.timeScale = 0f;
+       // Time.timeScale = 0f;
     }
 
     private void NextDialogueLine()
@@ -60,7 +87,7 @@ public class Dialogue : MonoBehaviour
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
-            Time.timeScale = 1f;
+           // Time.timeScale = 1f;
         }
     }
 
@@ -81,7 +108,7 @@ public class Dialogue : MonoBehaviour
             isPlayerInRange = true;
             Debug.Log("Dialogo");
         }
-        
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -90,6 +117,6 @@ public class Dialogue : MonoBehaviour
             isPlayerInRange = false;
             Debug.Log("NO Dialogo");
         }
-        
+
     }
 }
