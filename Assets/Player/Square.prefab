@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6179648152336700203}
   - component: {fileID: 900559930452367361}
+  - component: {fileID: 1880633956224482813}
   - component: {fileID: 16112203413160465}
   - component: {fileID: 5117803300365082189}
   - component: {fileID: 5587372450858646286}
   - component: {fileID: 5143502450255553324}
+  - component: {fileID: 1604913676507473553}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -88,6 +90,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1880633956224482813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143502450255553325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28427b9a854bc14bbcff23c1bd6b887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5117803300365082189}
+  animacion: {fileID: 1604913676507473553}
+  facingR: 1
 --- !u!114 &16112203413160465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +215,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+--- !u!95 &1604913676507473553
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143502450255553325}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9cd4614a4ef81c84fa5d6c2655b882c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

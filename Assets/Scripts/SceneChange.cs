@@ -13,4 +13,8 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene(numeroNivel);
     }
+    public void Salir()
+    {
+        Application.Quit();
+    }
 }

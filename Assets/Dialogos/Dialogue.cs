@@ -8,6 +8,7 @@ public class Dialogue : MonoBehaviour
 {
 
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject botonSalir;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
 
@@ -36,7 +37,6 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 dialogueText.text = dialogueLines[lineIndex];
             }
-
         }
     }
 
@@ -61,6 +61,7 @@ public class Dialogue : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             Time.timeScale = 1f;
+            
         }
     }
 

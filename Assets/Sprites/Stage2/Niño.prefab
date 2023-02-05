@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6936058288557847844}
   - component: {fileID: 4178284369583619598}
+  - component: {fileID: 2000282710509733956}
   - component: {fileID: 3871526632740414494}
   - component: {fileID: 8252081056637548610}
   - component: {fileID: 8649449676580510977}
   - component: {fileID: 4076583288822316459}
+  - component: {fileID: 6066217655268377268}
   m_Layer: 0
   m_Name: "Ni\xF1o"
   m_TagString: Player
@@ -88,6 +90,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2000282710509733956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278237585111516450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f542671cf4590c419874622d4b8767d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8252081056637548610}
+  animacion: {fileID: 6066217655268377268}
+  facingR: 1
 --- !u!114 &3871526632740414494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +215,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!95 &6066217655268377268
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278237585111516450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a620be1cceb12d43a5b9def12fb0387, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
