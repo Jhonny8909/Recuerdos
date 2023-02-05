@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class Regreoshub : MonoBehaviour
+public class CambioDeEscena : MonoBehaviour
 {
-    public int nombreNivel;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        int nombreNivel = 5;
         SceneManager.LoadScene(nombreNivel);
-        
+
     }
 }

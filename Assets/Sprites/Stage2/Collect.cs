@@ -6,7 +6,6 @@ public class Collect : MonoBehaviour
 {
     private bool isPlayerInRange;
     public GameObject Objetivo;
-    public bool activado;
 
     void Update()
     {
@@ -15,7 +14,6 @@ public class Collect : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             Destroy(gameObject,0.5f);
             Objetivo.SetActive(true);
-            activado = true;
         }
     }
 

@@ -1377,6 +1377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b50c5d1646ac644491cfc633c9e6ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombreNivel: 4
 --- !u!114 &1932337238 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6999513348426182445, guid: 26fe2c003c7a3714d9fdec25d9591031, type: 3}
