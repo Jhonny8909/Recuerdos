@@ -35,6 +35,7 @@ public class Controlador : MonoBehaviour
     }
     void LlenarListaAleatoria()
     {
+
         for (int i=0; i <= 5; i++)
         {
             ListaAleatoria.Add(Random.Range(0, 3));
