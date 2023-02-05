@@ -8,6 +8,7 @@ TagManager:
   - ItemDraggerParent
   - Objeto
   - Objetivo
+  - Hub
   layers:
   - Default
   - TransparentFX

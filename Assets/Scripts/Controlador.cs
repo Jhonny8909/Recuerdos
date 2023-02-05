@@ -107,7 +107,6 @@ public class Controlador : MonoBehaviour
             tecla2.SetActive(false);
             tecla3.SetActive(false);
             return;
-
         }
     }
    

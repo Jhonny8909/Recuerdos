@@ -36,7 +36,7 @@ public class notamov : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int nombreNivel = 0;
+        int nombreNivel = 6;
         SceneManager.LoadScene(nombreNivel);
     }
 }
