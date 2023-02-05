@@ -2,31 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cubiculo : MonoBehaviour
+public class Collect : MonoBehaviour
 {
     private bool isPlayerInRange;
-    private Contador contador;
+    public GameObject Objetivo;
 
-
+    void Update()
+    {
+        if (isPlayerInRange && Input.GetButtonDown("Fire1"))
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject,0.5f);
+            Objetivo.SetActive(true);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            Debug.Log("Accion");
-           
         }
-
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            Debug.Log("No accion");
         }
-
     }
 }
