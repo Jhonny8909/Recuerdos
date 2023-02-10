@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -84,6 +85,8 @@ public class Controlador : MonoBehaviour
         if (idCube != ListaAleatoria[ContadorJug])
         {
             print("game over");
+            Thread.Sleep(1000);
+            SceneManager.LoadScene(0);
             return;
         }
         if (ContadorJug == Contador)
