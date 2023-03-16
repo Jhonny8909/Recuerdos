@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,7 @@ public class CuadradosSimonDice : MonoBehaviour
         controlador.ClickUsuario(idCube);
         }
         Sonido.Play();
-
+        
        Invoke("DesactivarCubo",0.1f);
 
 

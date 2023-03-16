@@ -16,7 +16,7 @@ public class Controlador : MonoBehaviour
     public int Contador;
     public int ContadorJug;
     public int NivelActual;
-
+    public int jugact;
    
     public GameObject sprite;
     public GameObject tecla1;
@@ -91,7 +91,9 @@ public class Controlador : MonoBehaviour
         }
         if (ContadorJug == Contador)
         {
+            jugact++;
             CambiarEstado();
+            
         }
         else
         {
@@ -101,7 +103,7 @@ public class Controlador : MonoBehaviour
 
     private void Update()
     {
-        if (NivelActual == 6)
+        if (jugact == 6)
         {
             print("victoria");
             nota.SetActive(true);
